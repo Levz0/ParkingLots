@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Database31DataSet" targetNamespace="http://tempuri.org/Database31DataSet.xsd" xmlns:mstns="http://tempuri.org/Database31DataSet.xsd" xmlns="http://tempuri.org/Database31DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database31ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database31ConnectionString (Settings)" PropertyReference="ApplicationSettings.ип.Properties.Settings.GlobalReference.Default.Database31ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bdTableAdapter" GeneratorDataComponentClassName="bdTableAdapter" Name="bd" UserDataComponentName="bdTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database31ConnectionString (Settings)" DbObjectName="bd" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ФИО, Марка_Автомобиля, Цвет, Номер, Статус, Тип_ТС, Дата_начала_бронирования, Дата_конца_бронирования FROM bd</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ФИО" DataSetColumn="ФИО" />
+              <Mapping SourceColumn="Марка_Автомобиля" DataSetColumn="Марка_Автомобиля" />
+              <Mapping SourceColumn="Цвет" DataSetColumn="Цвет" />
+              <Mapping SourceColumn="Номер" DataSetColumn="Номер" />
+              <Mapping SourceColumn="Статус" DataSetColumn="Статус" />
+              <Mapping SourceColumn="Тип_ТС" DataSetColumn="Тип_ТС" />
+              <Mapping SourceColumn="Дата_начала_бронирования" DataSetColumn="Дата_начала_бронирования" />
+              <Mapping SourceColumn="Дата_конца_бронирования" DataSetColumn="Дата_конца_бронирования" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Database31DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Database31DataSet" msprop:Generator_DataSetName="Database31DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bd" msprop:Generator_RowEvHandlerName="bdRowChangeEventHandler" msprop:Generator_RowDeletedName="bdRowDeleted" msprop:Generator_RowDeletingName="bdRowDeleting" msprop:Generator_RowEvArgName="bdRowChangeEvent" msprop:Generator_TablePropName="bd" msprop:Generator_RowChangedName="bdRowChanged" msprop:Generator_RowChangingName="bdRowChanging" msprop:Generator_TableClassName="bdDataTable" msprop:Generator_RowClassName="bdRow" msprop:Generator_TableVarName="tablebd" msprop:Generator_UserTableName="bd">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_UserColumnName="ФИО" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Марка_Автомобиля" msprop:Generator_ColumnPropNameInRow="Марка_Автомобиля" msprop:Generator_ColumnPropNameInTable="Марка_АвтомобиляColumn" msprop:Generator_ColumnVarNameInTable="columnМарка_Автомобиля" msprop:Generator_UserColumnName="Марка_Автомобиля" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Цвет" msprop:Generator_ColumnPropNameInRow="Цвет" msprop:Generator_ColumnPropNameInTable="ЦветColumn" msprop:Generator_ColumnVarNameInTable="columnЦвет" msprop:Generator_UserColumnName="Цвет" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Номер" msprop:Generator_ColumnPropNameInRow="Номер" msprop:Generator_ColumnPropNameInTable="НомерColumn" msprop:Generator_ColumnVarNameInTable="columnНомер" msprop:Generator_UserColumnName="Номер" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Статус" msprop:Generator_ColumnPropNameInRow="Статус" msprop:Generator_ColumnPropNameInTable="СтатусColumn" msprop:Generator_ColumnVarNameInTable="columnСтатус" msprop:Generator_UserColumnName="Статус" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Тип_ТС" msprop:Generator_ColumnPropNameInRow="Тип_ТС" msprop:Generator_ColumnPropNameInTable="Тип_ТСColumn" msprop:Generator_ColumnVarNameInTable="columnТип_ТС" msprop:Generator_UserColumnName="Тип_ТС" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Дата_начала_бронирования" msprop:Generator_ColumnPropNameInRow="Дата_начала_бронирования" msprop:Generator_ColumnPropNameInTable="Дата_начала_бронированияColumn" msprop:Generator_ColumnVarNameInTable="columnДата_начала_бронирования" msprop:Generator_UserColumnName="Дата_начала_бронирования" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Дата_конца_бронирования" msprop:Generator_ColumnPropNameInRow="Дата_конца_бронирования" msprop:Generator_ColumnPropNameInTable="Дата_конца_бронированияColumn" msprop:Generator_ColumnVarNameInTable="columnДата_конца_бронирования" msprop:Generator_UserColumnName="Дата_конца_бронирования" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

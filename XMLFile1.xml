@@ -1,0 +1,9 @@
+﻿<TextBox Text="TestText">
+	<TextBox.Template>
+		<ControlTemplate>
+			<Border CornerRadius="12" Padding="2" BorderThickness="1" BorderBrush="#FFD80000">
+				<ScrollViewer Margin="0" textBoxlog="PART_ContentHost" />
+			</Border>
+		</ControlTemplate>
+	</TextBox.Template>
+</TextBox>
