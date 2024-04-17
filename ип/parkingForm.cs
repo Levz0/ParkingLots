@@ -344,7 +344,7 @@ namespace ип
                         command.Parameters.Add("@start_date", SqlDbType.DateTime).Value = datachangeForm.Dtp_picker.Value;
                         command.Parameters.Add("@end_date", SqlDbType.DateTime).Value = datachangeForm.Dtp_picker.Value;
 
-
+                        Btn_Back_Click(sender, e);
                         try
                         {
                             if (Database.GetConn().State != ConnectionState.Open)
@@ -353,17 +353,20 @@ namespace ип
                             if (command.ExecuteNonQuery() > 0)
                             {
                                 MessageBox.Show("Запись добавлена успешно!");
+                                parkfill(sender, e);    
+                                selecteditem(sender, e);
+                                Labels_fill(sender, e);
                             }
                             else
                             {
                                 MessageBox.Show("Ошибка добавления записи!");
-                                Btn_Back_Click(sender, e);
+                                
                             }
 
-                            parkfill(sender, e);
 
                             places[selfindex].StatusIsTaken = true;
                             Btn_add_car.Visible = false;
+                            
                         }
                         catch (Exception ex)
                         {
@@ -375,8 +378,10 @@ namespace ип
                             Database.CloseConnection();
                         }
                     }
+                 
                 }
             }
+           
         }
 
 
@@ -385,6 +390,7 @@ namespace ип
         {
             List<Place> places = PlacesInformation.Store();
 
+           
             string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
 
             switch (places[selfindex].TypeOfTs)
@@ -403,7 +409,17 @@ namespace ип
                     places[selfindex].PictureBox.Image = Image.FromFile(Path.Combine(projectDirectory, "cars_pack", $"{TranslateColorToEnglish(places[selfindex].CarsColor)}_car_trailer.jpg"));
                     break;
             }
-        
+
+
+            for (int i = 0; i < Math.Min(places.Count, 20); i++)
+            {
+                Control slotControl = this.Controls.Find($"Slot_{i + 1}", true).FirstOrDefault();
+                if (slotControl is PictureBox pictureBox)
+                {
+                    pictureBox.Image = places[i].PictureBox.Image;
+                }
+            }
+
         }
 
    

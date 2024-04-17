@@ -12,7 +12,7 @@ namespace ип.Connect
 
     static class Database
     {
-        static public  string connectionString = $"Data Source=192.168.1.243;Initial Catalog" +
+        static public  string connectionString = $"Data Source=DESKTOP-CANRC2F;Initial Catalog" +
             $"=Parking_Lot;Integrated Security=True";
 
         static public SqlConnection conn = new SqlConnection(connectionString);
