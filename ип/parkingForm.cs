@@ -260,37 +260,64 @@ namespace ип
             }
             else if (datachangeForm.DialogResult == DialogResult.No)
             {
-                dbConnection.Open();
-
-
-
-                string query = $"Update bd SET ФИО='{""} ',Марка_Автомобиля='{""} ',Цвет='{""} ',Номер='{""} ',Тип_ТС='{""} ',Дата_начала_бронирования='{"01.01.2023"} ',Статус='0 'where ID={selfindex}";
-
-
-                OleDbCommand dbCommand = new OleDbCommand(query, dbConnection);
 
 
 
 
-                if (dbCommand.ExecuteNonQuery() != 1)
+                string query = $"Delete from Lots_now where Номер_места = '{places[selfindex].PlaceNumber}'";
+
+                using (SqlConnection connection = Database.GetConn())
+
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    MessageBox.Show("Не удалось удалить данные!");
-                }
-                else
-                {
-                    MessageBox.Show("Данные удалены!");
-                    FIO_field.Text = places[selfindex].Fio = "";
-                    CARSBRAND_field.Text = places[selfindex].CarsBrand = "";
-                    places[selfindex].PictureBox.Image = null;
-                    CARSCOLOR_field.Text = places[selfindex].CarsColor = "";
-                    CARSNUMBER_field.Text = places[selfindex].CarsNumber = "";
-                    places[selfindex].StatusIsTaken = false;
-                    Btn_add_car.Visible = false;
-                    TYPEOFTS_field.Text = "";
-                    DATE_field.Text = "";
+                    connection.ConnectionString = Database.connectionString;   
+                    Btn_Back_Click(sender, e);
+                    try
+                    {
+                        if (Database.GetConn().State != ConnectionState.Open)
+                            Database.OpenConnection();
+
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("Место успешно освобождено!");
+                            Btn_Back_Click(sender, e);
+                            FIO_field.Text = places[selfindex].Fio = "";
+                            CARSBRAND_field.Text = places[selfindex].CarsBrand = "";
+                            places[selfindex].PictureBox.Image = null;
+                            CARSCOLOR_field.Text = places[selfindex].CarsColor = "";
+                            CARSNUMBER_field.Text = places[selfindex].CarsNumber = "";
+                            places[selfindex].StatusIsTaken = false;
+                            Btn_add_car.Visible = false;
+                            TYPEOFTS_field.Text = "";
+                            DATE_field.Text = "";
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ошибка удаления транспортного средства!");
+
+                        }
+
+
+                        places[selfindex].StatusIsTaken = true;
+                        Btn_add_car.Visible = false;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Произошла ошибка: {ex.Message}");
+                        // Логирование исключения, если необходимо
+                    }
+                    finally
+                    {
+                        Database.CloseConnection();
+                    }
                 }
 
-                Btn_Back_Click(sender, e);
+
+
+
             }
 
 
