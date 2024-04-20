@@ -209,18 +209,22 @@ namespace ип
             datachangeForm.Dtp_picker.Text = places[selfindex].CarsDate;
             datachangeForm.Dtp_picker_end.Text = places[selfindex].CarsDateEnd;
 
-            switch (places[selfindex].TypeOfTs)
-            {
-                case "легковоеТС":
-                    datachangeForm.Cmb_typeofts.SelectedIndex = 0; break;
-                case "грузовоеТС":
-                    datachangeForm.Cmb_typeofts.SelectedIndex = 1; break;
-                case "мотоцикл":
-                    datachangeForm.Cmb_typeofts.SelectedIndex = 2; break;
-                case "ТС с прицепом":
-                    datachangeForm.Cmb_typeofts.SelectedIndex = 3; break;
-            }
+           /* int x = datachangeForm.Cmb_typeofts.FindStringExact(places[selfindex].CarsColor);
 
+            datachangeForm.Cmb_changing_color.SelectedValue = x;*/
+
+            switch (places[selfindex].TypeOfTs)
+             {
+                 case "легковоеТС":
+
+                     datachangeForm.Cmb_typeofts.SelectedIndex = 0; break;
+                 case "грузовоеТС":
+                     datachangeForm.Cmb_typeofts.SelectedIndex = 1; break;
+                 case "Тc_с_прицепом":
+                     datachangeForm.Cmb_typeofts.SelectedIndex = 2; break;
+                 case "мотоТС":
+                     datachangeForm.Cmb_typeofts.SelectedIndex = 3; break;
+             }
 
 
             string connectionString = "provider=Microsoft.ACE.OLEDB.12.0;Data Source= Database31.accdb";

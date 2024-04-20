@@ -20,8 +20,43 @@ namespace ип
             InitializeComponent();
             Dtp_picker.Format = DateTimePickerFormat.Time;
             Dtp_picker_end.Format = DateTimePickerFormat.Time;
-            
-            
+            string query = $"Select  id, Color from Car_colors";
+            string query1 = $"Select * from Type_Ts";
+
+            using (SqlConnection con = Database.GetConn())
+            {
+
+                con.ConnectionString = Database.connectionString;
+
+
+                Database.OpenConnection();
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.CommandType = CommandType.Text;
+                DataTable table = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(table);
+                Cmb_changing_color.DisplayMember = "Color";
+                Cmb_changing_color.ValueMember = "id";
+                Cmb_changing_color.DataSource = table;
+
+
+                SqlCommand cmd1 = new SqlCommand(query1, Database.GetConn());
+                cmd1.CommandType = CommandType.Text;
+                DataTable table1 = new DataTable();
+                SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+                adapter1.Fill(table1);
+                Cmb_typeofts.DisplayMember = "TypeTs";
+                Cmb_typeofts.ValueMember = "id";
+                Cmb_typeofts.DataSource = table1;
+
+
+            }
+
+
+         
+
+
         }
 
         private void check(object sender, EventArgs e)
@@ -47,41 +82,8 @@ namespace ип
                 
         }
 
-        public void DataChangeForm_Load(object sender, EventArgs e)
+          public void DataChangeForm_Load(object sender, EventArgs e)
         {
-            string query = $"Select  id, Color from Car_colors";
-            string query1 = $"Select * from Type_Ts";
-
-            using (SqlConnection con = Database.GetConn())
-            {
-
-                con.ConnectionString = Database.connectionString;
-               
-                
-                Database.OpenConnection();
-
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.CommandType = CommandType.Text;
-                DataTable table = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(table);          
-                Cmb_changing_color.DisplayMember = "Color";
-                Cmb_changing_color.ValueMember = "id";
-                Cmb_changing_color.DataSource = table;
-
-
-                SqlCommand cmd1 = new SqlCommand(query1, Database.GetConn());
-                cmd1.CommandType = CommandType.Text;
-                DataTable table1 = new DataTable();
-                SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
-                adapter1.Fill(table1);
-                Cmb_typeofts.DisplayMember = "TypeTs";
-                Cmb_typeofts.ValueMember = "id";
-                Cmb_typeofts.DataSource = table1;
-
-            }
-
-
 
             Cmb_changing_color.TextChanged += (s, a) => { check(sender, e); };
             Txt_cars_type.TextChanged += (s, a) => { check(sender, e); };
@@ -93,8 +95,6 @@ namespace ип
             this.Dtp_picker.ValueChanged += new System.EventHandler(this.Dtp_picker_ValueChanged);
             Btn_Add.Enabled = false;
 
-            
-       
 
 
         }
