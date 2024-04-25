@@ -117,11 +117,11 @@
             this.lbl_parking.BackColor = System.Drawing.Color.Snow;
             this.lbl_parking.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lbl_parking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lbl_parking.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_parking.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_parking.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lbl_parking.Location = new System.Drawing.Point(665, 803);
             this.lbl_parking.Name = "lbl_parking";
-            this.lbl_parking.Size = new System.Drawing.Size(430, 55);
+            this.lbl_parking.Size = new System.Drawing.Size(431, 55);
             this.lbl_parking.TabIndex = 1;
             this.lbl_parking.Text = "Меню управления";
             // 
@@ -693,7 +693,7 @@
             this.Controls.Add(this.Slot_2);
             this.Controls.Add(this.Slot_1);
             this.Controls.Add(this.lbl_parking);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "parkingForm";
