@@ -24,6 +24,7 @@ namespace ип
         public parkingForm()
         {
             InitializeComponent();
+            this.FormClosing += MainForm_FormClosing;
         }
 
         static public string TranslateColorToEnglish(string color)
@@ -75,7 +76,7 @@ namespace ип
         private void selecteditem(object sender, EventArgs e)
         {
             List<Place> places = PlacesInformation.Store();
-            
+
 
             ChooseSpot.Visible = false;
             CARSBRAND_lbl.Visible = CARSCOLOR_lbl.Visible = CARSNUMBER_lbl.Visible = FIO_lbl.Visible = DATE_lbl.Visible =
@@ -189,12 +190,12 @@ namespace ип
                 });
 
 
-                
+
 
 
             });
 
-            
+
 
         }
 
@@ -209,22 +210,22 @@ namespace ип
             datachangeForm.Dtp_picker.Text = places[selfindex].CarsDate;
             datachangeForm.Dtp_picker_end.Text = places[selfindex].CarsDateEnd;
 
-           /* int x = datachangeForm.Cmb_typeofts.FindStringExact(places[selfindex].CarsColor);
+            /* int x = datachangeForm.Cmb_typeofts.FindStringExact(places[selfindex].CarsColor);
 
-            datachangeForm.Cmb_changing_color.SelectedValue = x;*/
+             datachangeForm.Cmb_changing_color.SelectedValue = x;*/
 
             switch (places[selfindex].TypeOfTs)
-             {
-                 case "легковоеТС":
+            {
+                case "легковоеТС":
 
-                     datachangeForm.Cmb_typeofts.SelectedIndex = 0; break;
-                 case "грузовоеТС":
-                     datachangeForm.Cmb_typeofts.SelectedIndex = 1; break;
-                 case "Тc_с_прицепом":
-                     datachangeForm.Cmb_typeofts.SelectedIndex = 2; break;
-                 case "мотоТС":
-                     datachangeForm.Cmb_typeofts.SelectedIndex = 3; break;
-             }
+                    datachangeForm.Cmb_typeofts.SelectedIndex = 0; break;
+                case "грузовоеТС":
+                    datachangeForm.Cmb_typeofts.SelectedIndex = 1; break;
+                case "Тc_с_прицепом":
+                    datachangeForm.Cmb_typeofts.SelectedIndex = 2; break;
+                case "мотоТС":
+                    datachangeForm.Cmb_typeofts.SelectedIndex = 3; break;
+            }
 
 
             string connectionString = "provider=Microsoft.ACE.OLEDB.12.0;Data Source= Database31.accdb";
@@ -260,7 +261,7 @@ namespace ип
                     MessageBox.Show("Данные были успешно сохранены!");
 
                 dbConnection.Close();
-              
+
             }
             else if (datachangeForm.DialogResult == DialogResult.No)
             {
@@ -274,7 +275,7 @@ namespace ип
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    connection.ConnectionString = Database.connectionString;   
+                    connection.ConnectionString = Database.connectionString;
                     Btn_Back_Click(sender, e);
                     try
                     {
@@ -352,17 +353,17 @@ namespace ип
 
                     TYPEOFTS_field.Text = places[selfindex].TypeOfTs = selectedType["TypeTs"].ToString();
 
-                     DATE_field.Text = places[selfindex].CarsDate = datachangeForm.Dtp_picker.Value.ToString();
+                    DATE_field.Text = places[selfindex].CarsDate = datachangeForm.Dtp_picker.Value.ToString();
 
                     places[selfindex].CarsDateEnd = datachangeForm.Dtp_picker_end.Value.ToString();
 
-                    
+
 
                     string query = "INSERT INTO Lots_Now (Номер_места, ФИО, Марка_Автомобиля, Цвет, Номер, Тип_ТС, Дата_начала_бронирования, Дата_конца_бронирования)" +
                                    " VALUES (@placenumber, @fio, @cars_type, @changing_color, @number, @TypeOfTs, @start_date, @end_date)";
 
                     using (SqlConnection connection = Database.GetConn())
-                    
+
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         connection.ConnectionString = Database.connectionString;
@@ -384,20 +385,20 @@ namespace ип
                             if (command.ExecuteNonQuery() > 0)
                             {
                                 MessageBox.Show("Запись добавлена успешно!");
-                                parkfill(sender, e);    
+                                parkfill(sender, e);
                                 selecteditem(sender, e);
                                 Labels_fill(sender, e);
                             }
                             else
                             {
                                 MessageBox.Show("Ошибка добавления записи!");
-                                
+
                             }
 
 
                             places[selfindex].StatusIsTaken = true;
                             Btn_add_car.Visible = false;
-                            
+
                         }
                         catch (Exception ex)
                         {
@@ -409,10 +410,10 @@ namespace ип
                             Database.CloseConnection();
                         }
                     }
-                 
+
                 }
             }
-           
+
         }
 
 
@@ -421,7 +422,7 @@ namespace ип
         {
             List<Place> places = PlacesInformation.Store();
 
-           
+
             string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
 
             switch (places[selfindex].TypeOfTs)
@@ -431,7 +432,7 @@ namespace ип
                     break;
                 case "легковоеТС":
                     places[selfindex].PictureBox.Image = Image.FromFile(Path.Combine(projectDirectory, "cars_pack", $"{TranslateColorToEnglish(places[selfindex].CarsColor)}_car.jpg"));
-       
+
                     break;
                 case "грузовоеТС":
                     places[selfindex].PictureBox.Image = Image.FromFile(Path.Combine(projectDirectory, "cars_pack", $"{TranslateColorToEnglish(places[selfindex].CarsColor)}_truck.jpg"));
@@ -452,7 +453,25 @@ namespace ип
             }
 
         }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Вы уверены, что хотите закрыть приложение?", "Подтверждение закрытия", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true; // Отмена закрытия формы
+                }
+                else
+                {
+                    List<Place> places = PlacesInformation.Store();
+                  
+                    places.Clear();
+                }
+            }
+        }
 
+    }
    
     }
 
@@ -473,5 +492,5 @@ namespace ип
 
 
     
-}
+
          
