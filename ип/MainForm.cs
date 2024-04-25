@@ -39,6 +39,9 @@ namespace ип
 
         private void label4_Click(object sender, EventArgs e)
         {
+            about about = new about();
+            about.Show();
+            
             
         }
 
