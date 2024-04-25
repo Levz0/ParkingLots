@@ -305,6 +305,10 @@ namespace ип
                             TYPEOFTS_field.Text = "";
                             DATE_field.Text = "";
 
+                            using (SqlCommand command1 = new SqlCommand())
+                            {
+                                string query1 = $"Delete from Lots_now where Номер_места = '{places[selfindex].PlaceNumber}'";
+                            }
 
                         }
                         else
@@ -396,6 +400,14 @@ namespace ип
                                 MessageBox.Show("Запись добавлена успешно!");
                                 parkfill(sender, e);
                                 selecteditem(sender, e);
+                                for (int i = 0; i < Math.Min(places.Count, 20); i++)
+                                {
+                                    Control slotControl = this.Controls.Find($"Slot_{i + 1}", true).FirstOrDefault();
+                                    if (slotControl is PictureBox pictureBox)
+                                    {
+                                        pictureBox.Image = places[i].PictureBox.Image;
+                                    }
+                                }
                                 Labels_fill(sender, e);
                             }
                             else

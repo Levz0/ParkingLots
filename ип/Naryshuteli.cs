@@ -16,5 +16,12 @@ namespace ип
         {
             InitializeComponent();
         }
+
+        private void Naryshuteli_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "parking_LotDataSet.Intruders". При необходимости она может быть перемещена или удалена.
+            this.intrudersTableAdapter.Fill(this.parking_LotDataSet.Intruders);
+
+        }
     }
 }

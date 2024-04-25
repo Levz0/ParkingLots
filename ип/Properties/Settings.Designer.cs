@@ -42,5 +42,15 @@ namespace ип.Properties {
                 return ((string)(this["ParkingLotConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-CANRC2F;Initial Catalog=Parking_Lot;Integrated Security=True")]
+        public string Parking_LotConnectionString {
+            get {
+                return ((string)(this["Parking_LotConnectionString"]));
+            }
+        }
     }
 }
