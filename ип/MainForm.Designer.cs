@@ -109,7 +109,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(791, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(193, 28);
@@ -125,7 +125,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(870, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 28);
