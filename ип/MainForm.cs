@@ -49,5 +49,11 @@ namespace ип
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Naryshuteli naryshuteli = new Naryshuteli();
+            naryshuteli.ShowDialog();
+        }
     }
 }
