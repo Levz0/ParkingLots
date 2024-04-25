@@ -67,7 +67,7 @@ namespace ип.PlacesAdding
             CarsDateEnd = carsDateEnd;
 
             
-            }
+         }
 
         // Переменные
 

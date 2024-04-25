@@ -289,6 +289,15 @@ namespace ип
                             FIO_field.Text = places[selfindex].Fio = "";
                             CARSBRAND_field.Text = places[selfindex].CarsBrand = "";
                             places[selfindex].PictureBox.Image = null;
+                            for (int i = 0; i < Math.Min(places.Count, 20); i++)
+                            {
+                                Control slotControl = this.Controls.Find($"Slot_{i + 1}", true).FirstOrDefault();
+                                if (slotControl is PictureBox pictureBox)
+                                {
+                                    pictureBox.Image = places[i].PictureBox.Image;
+                                }
+                            }
+                           
                             CARSCOLOR_field.Text = places[selfindex].CarsColor = "";
                             CARSNUMBER_field.Text = places[selfindex].CarsNumber = "";
                             places[selfindex].StatusIsTaken = false;
@@ -305,8 +314,8 @@ namespace ип
                         }
 
 
-                        places[selfindex].StatusIsTaken = true;
-                        Btn_add_car.Visible = false;
+                       
+                     
 
                     }
                     catch (Exception ex)
