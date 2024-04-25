@@ -644,7 +644,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1183, 718);
+            this.ClientSize = new System.Drawing.Size(1187, 718);
             this.Controls.Add(this.Btn_add_car);
             this.Controls.Add(this.ChooseSpot);
             this.Controls.Add(this.pictureBox2);

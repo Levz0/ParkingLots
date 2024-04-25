@@ -33,6 +33,8 @@
             this.lbl_parking = new System.Windows.Forms.Label();
             this.lbl_exit = new System.Windows.Forms.Label();
             this.Lb_report = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Parking_Lot
@@ -99,6 +101,38 @@
             this.Lb_report.Text = "Report";
             this.Lb_report.Click += new System.EventHandler(this.Lb_report_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(791, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(193, 28);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "About programm";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(870, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 28);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Reference";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +141,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(996, 594);
             this.Controls.Add(this.lbl_exit);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Lb_report);
             this.Controls.Add(this.lbl_parking);
             this.Controls.Add(this.Parking_Lot);
@@ -129,6 +165,8 @@
         private System.Windows.Forms.Label lbl_parking;
         private System.Windows.Forms.Label lbl_exit;
         private System.Windows.Forms.Label Lb_report;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
