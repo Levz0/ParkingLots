@@ -47,7 +47,8 @@ namespace ип
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            reference reference = new reference();
+            reference.ShowDialog(); 
         }
 
         private void label1_Click(object sender, EventArgs e)
