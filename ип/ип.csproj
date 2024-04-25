@@ -82,6 +82,12 @@
     <Compile Include="PlacesAdding\ListIntialize.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reference.Designer.cs">
+      <DependentUpon>reference.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reg_Vhod\Log_in.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reference.resx">
+      <DependentUpon>reference.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reg_Vhod\Log_in.resx">
       <DependentUpon>Log_in.cs</DependentUpon>
     </EmbeddedResource>
