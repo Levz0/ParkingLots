@@ -48,30 +48,30 @@ namespace ип.Reg_Vhod
             // textBox_login
             // 
             this.textBox_login.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox_login.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_login.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox_login.Location = new System.Drawing.Point(231, 161);
             this.textBox_login.Name = "textBox_login";
-            this.textBox_login.Size = new System.Drawing.Size(262, 38);
+            this.textBox_login.Size = new System.Drawing.Size(262, 35);
             this.textBox_login.TabIndex = 0;
             // 
             // textBox_password
             // 
             this.textBox_password.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox_password.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_password.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox_password.Location = new System.Drawing.Point(231, 213);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(262, 38);
+            this.textBox_password.Size = new System.Drawing.Size(262, 35);
             this.textBox_password.TabIndex = 1;
             // 
             // avtoriz
             // 
             this.avtoriz.AutoSize = true;
             this.avtoriz.BackColor = System.Drawing.Color.Transparent;
-            this.avtoriz.Font = new System.Drawing.Font("Rage Italic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avtoriz.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.avtoriz.ForeColor = System.Drawing.Color.White;
-            this.avtoriz.Location = new System.Drawing.Point(261, 12);
+            this.avtoriz.Location = new System.Drawing.Point(230, 9);
             this.avtoriz.Name = "avtoriz";
-            this.avtoriz.Size = new System.Drawing.Size(214, 44);
+            this.avtoriz.Size = new System.Drawing.Size(263, 46);
             this.avtoriz.TabIndex = 2;
             this.avtoriz.Text = "Регистрация";
             // 
@@ -79,11 +79,11 @@ namespace ип.Reg_Vhod
             // 
             this.pass.AutoSize = true;
             this.pass.BackColor = System.Drawing.Color.Transparent;
-            this.pass.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass.ForeColor = System.Drawing.Color.White;
             this.pass.Location = new System.Drawing.Point(109, 216);
             this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(93, 30);
+            this.pass.Size = new System.Drawing.Size(117, 31);
             this.pass.TabIndex = 2;
             this.pass.Text = "Пароль:";
             // 
@@ -91,18 +91,18 @@ namespace ип.Reg_Vhod
             // 
             this.login.AutoSize = true;
             this.login.BackColor = System.Drawing.Color.Transparent;
-            this.login.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login.ForeColor = System.Drawing.Color.White;
             this.login.Location = new System.Drawing.Point(115, 161);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(78, 30);
+            this.login.Size = new System.Drawing.Size(99, 31);
             this.login.TabIndex = 2;
             this.login.Text = "Логин:";
             // 
             // Btn_Create
             // 
             this.Btn_Create.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Btn_Create.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Create.Location = new System.Drawing.Point(231, 270);
             this.Btn_Create.Name = "Btn_Create";
             this.Btn_Create.Size = new System.Drawing.Size(262, 51);
@@ -126,11 +126,11 @@ namespace ип.Reg_Vhod
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("MV Boli", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(273, 362);
+            this.label2.Location = new System.Drawing.Point(234, 375);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 30);
+            this.label2.Size = new System.Drawing.Size(259, 31);
             this.label2.TabIndex = 20;
             this.label2.Text = "Уже есть аккаунт?";
             this.label2.Click += new System.EventHandler(this.label2_Click);

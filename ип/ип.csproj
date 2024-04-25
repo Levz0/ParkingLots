@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="captcha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="captcha.Designer.cs">
-      <DependentUpon>captcha.cs</DependentUpon>
-    </Compile>
     <Compile Include="Connect\Database.cs" />
     <Compile Include="Connect\md5.cs" />
     <Compile Include="DataChangeForm.cs">
@@ -101,9 +95,6 @@
       <DependentUpon>reportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PlacesAdding\Places.cs" />
-    <EmbeddedResource Include="captcha.resx">
-      <DependentUpon>captcha.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DataChangeForm.resx">
       <DependentUpon>DataChangeForm.cs</DependentUpon>
     </EmbeddedResource>

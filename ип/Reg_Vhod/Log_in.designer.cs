@@ -49,11 +49,11 @@ namespace ип.Reg_Vhod
             // 
             this.login.AutoSize = true;
             this.login.BackColor = System.Drawing.Color.Transparent;
-            this.login.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login.ForeColor = System.Drawing.Color.White;
             this.login.Location = new System.Drawing.Point(115, 161);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(78, 30);
+            this.login.Size = new System.Drawing.Size(99, 31);
             this.login.TabIndex = 10;
             this.login.Text = "Логин:";
             // 
@@ -61,11 +61,11 @@ namespace ип.Reg_Vhod
             // 
             this.pass.AutoSize = true;
             this.pass.BackColor = System.Drawing.Color.Transparent;
-            this.pass.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass.ForeColor = System.Drawing.Color.White;
             this.pass.Location = new System.Drawing.Point(109, 216);
             this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(93, 30);
+            this.pass.Size = new System.Drawing.Size(117, 31);
             this.pass.TabIndex = 11;
             this.pass.Text = "Пароль:";
             // 
@@ -73,28 +73,28 @@ namespace ип.Reg_Vhod
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Rage Italic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(241, 12);
+            this.label1.Location = new System.Drawing.Point(223, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 44);
+            this.label1.Size = new System.Drawing.Size(269, 46);
             this.label1.TabIndex = 12;
             this.label1.Text = "Авторизация";
             // 
             // textBoxpass
             // 
             this.textBoxpass.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBoxpass.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxpass.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxpass.ForeColor = System.Drawing.Color.White;
             this.textBoxpass.Location = new System.Drawing.Point(231, 213);
             this.textBoxpass.Name = "textBoxpass";
-            this.textBoxpass.Size = new System.Drawing.Size(262, 39);
+            this.textBoxpass.Size = new System.Drawing.Size(262, 35);
             this.textBoxpass.TabIndex = 2;
             // 
             // Btn_Enter
             // 
             this.Btn_Enter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Btn_Enter.Font = new System.Drawing.Font("Rage Italic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Enter.Location = new System.Drawing.Point(231, 270);
             this.Btn_Enter.Name = "Btn_Enter";
             this.Btn_Enter.Size = new System.Drawing.Size(262, 51);
@@ -132,11 +132,11 @@ namespace ип.Reg_Vhod
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("MV Boli", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(243, 365);
+            this.label2.Location = new System.Drawing.Point(228, 375);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 32);
+            this.label2.Size = new System.Drawing.Size(265, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ещё нет аккаунта?";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -155,11 +155,11 @@ namespace ип.Reg_Vhod
             // textBoxlog
             // 
             this.textBoxlog.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBoxlog.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxlog.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxlog.ForeColor = System.Drawing.Color.White;
             this.textBoxlog.Location = new System.Drawing.Point(231, 161);
             this.textBoxlog.Name = "textBoxlog";
-            this.textBoxlog.Size = new System.Drawing.Size(262, 39);
+            this.textBoxlog.Size = new System.Drawing.Size(262, 35);
             this.textBoxlog.TabIndex = 1;
             // 
             // Log_in
